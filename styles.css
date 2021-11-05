@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Oleo+Script:wght@700&family=Open+Sans:wght@800&family=PT+Sans&family=Prosto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url(fonts/CooperHewitt-Light.otf);
+}
+:root{
+  --main-font: 'Open Sans', sans-serif;
+  --label-font: 'Cooper Hewitt';
+  --text-font: 'PT Sans', sans-serif;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--text-font);
+}
+h1, h2, h3{
+  font-family: var(--label-font);
+}
+
+.main-pages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+  height: 100vh;
+  width: 100%;
+  min-width: 230px;
+  flex-flow: wrap column;
+}
+.banner-div{
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  justify-content: space-around;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.text-div{
+  background-color: rgba(85, 85, 85, 0.8);
+  padding: 1%;
+  color: white;
+  margin: 20px 0;
+  width: 80%;
+}
+.img-div{
+  width: 250px;
+  aspect-ratio: 1/1;
+  background-color: beige;
+  padding: 2%;
+  border: rgba(85, 85, 85, 0.8) solid 2px;
+}
+.img-div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+#home{
+  background-image: url('/imgs/coffee-shop.jpg');
+  background-position: 20% 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#home h1{
+  display: inline-block;
+  font-family: 'Prosto One', cursive;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #B3B1AC;
+  color: white;
+  text-shadow: black 0px 2px 2px;
+  line-height: 1.2;
+  margin-bottom: 300px;
+  margin-left: 20px;
+}
+
+
+#company-banner{
+  background-image: url('/imgs/background.jpg');
+}
+#company-banner img{
+  object-position: -70px 0px;
+}
+
+
+#coffee-banner{
+  background-image: url('/imgs/coffee-bean.jpg');
+}
+#coffee-banner img{
+  object-position: 0px -10px;
+}
+
+
+#subscribe-div{
+  min-height: 510px;
+  height: auto;
+  justify-content: space-around;
+  background-color: rgb(44, 44, 44);
+}
+#subscribe-form-div{
+  width: 250px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 15px;
+}
+#subscribe-form label{
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+#subscribe-form input[type="email"]{
+  color: white;
+  background-color: #221C16;
+  margin: 10px 0;
+  height: 30px;
+  width: 180px;
+}
+#subscribe-form input[type="text"]:focus-visible{
+  outline: none;
+  border: none;
+}
+#subscribe-form input[type="button"]{
+  font-family: var(--text-font);
+  border: none;
+  height: 30px;
+  width: 95px;
+  background-color: white;
+  border-radius: 0;
+  border: black solid 2px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#subscribe-message-div{
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(224, 222, 222, 0.5);
+  width: 200px;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+#stay-in-touch-div{
+  margin: 50px 0;
+  padding: 20px;
+  display: flex;
+  line-height: 2;
+  align-items: center;
+  flex-flow: wrap column;
+  background-color: white;
+}
+#stay-in-touch-div i{
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 10px;
+}
+
+#credits{
+  color: white;
+  margin-bottom: 20px;
+}
+#credits a{
+  color: white;
+  font-weight: 500;
+}
+#credits a:hover{
+  background-color: white;
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .banner-div{
+    background-color: burlywood;
+    box-shadow: 0px 0px 5px 1px black;
+    flex-flow: wrap row;
+    height: 70%;
+  }
+  .text-div{
+    margin: 20px 0;
+    width: 40%;
+  }
+  #home h1{
+    font-size: 3rem;
+  }
+  #coffee-banner{
+    flex-flow: wrap row-reverse;
+  }
+  #subscribe-div{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    justify-items: center;
+  }
+  #stay-in-touch-div{
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  *{
+    position: relative;
+  }
+  .banner-div{
+    background-size: 100%;
+    opacity: 1;
+    transition: background-size 1s, opacity 500ms;
+  }
+  .banner-div.inactive{
+    background-size: 120%;
+    opacity: 0;
+  }
+  #company-banner .img-div.inactive{
+    left: 40px;
+    opacity: 0;
+  }
+  #company-banner .text-div.inactive{
+    bottom: 40px;
+    opacity: 0;
+  }
+  #company-banner .img-div{
+    left: 0px;
+    opacity: 1;
+    transition: opacity 1s 300ms , left 1s 400ms;
+  }
+  #company-banner .text-div{
+    bottom: 0px;
+    opacity: 1;
+    transition: opacity 1s 500ms , bottom 1s 600ms;
+  }
+
+
+  #coffee-banner .img-div.inactive{
+    right: 40px;
+    opacity: 0;
+  }
+  #coffee-banner .text-div.inactive{
+    top: 40px;
+    opacity: 0;
+  }
+  #coffee-banner .img-div{
+    right: 0px;
+    opacity: 1;
+    transition: opacity 1s 300ms , right 1s 400ms;
+  }
+  #coffee-banner .text-div{
+    top: 0px;
+    opacity: 1;
+    transition: opacity 1s 500ms , top 1s 600ms;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .img-div{
+    width: 300px;
+  }
+}
