@@ -62,7 +62,7 @@ h1, h2, h3{
 
 
 #home{
-  background-image: url('/imgs/coffee-shop.jpg');
+  background-image: url('imgs/coffee-shop.jpg');
   background-position: 20% 60%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@ h1, h2, h3{
 
 
 #company-banner{
-  background-image: url('/imgs/background.jpg');
+  background-image: url('imgs/background.jpg');
 }
 #company-banner img{
   object-position: -70px 0px;
@@ -91,7 +91,7 @@ h1, h2, h3{
 
 
 #coffee-banner{
-  background-image: url('/imgs/coffee-bean.jpg');
+  background-image: url('imgs/coffee-bean.jpg');
 }
 #coffee-banner img{
   object-position: 0px -10px;
