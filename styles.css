@@ -64,13 +64,11 @@ h1, h2, h3{
 #home{
   background-image: url('imgs/coffee-shop2.jpg');
   background-position: 20% 60%;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 #home h1{
   display: inline-block;
-  font-family: 'Prosto One', cursive;
-  font-family: 'Lato', sans-serif;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
@@ -78,8 +76,11 @@ h1, h2, h3{
   line-height: 1.2;
   margin-bottom: 0px;
   margin-left: 0px;
+  text-align: center;
 }
-
+#unwind, #tarakape{
+  font-family: 'Montserrat', sans-serif;
+}
 
 #company-banner{
   background-image: url('imgs/background.jpg');
@@ -211,6 +212,40 @@ h1, h2, h3{
   *{
     position: relative;
   }
+
+  #home.inactive{
+    opacity: 0;
+    background-size: 120%;
+  }
+  #home{
+    transition: background-size 1s, opacity 1s;
+  }
+  #home h1.inactive{
+    opacity: 0;
+  }
+  #home h1{
+    opacity: 1;
+    transition: opacity 1s 1s;
+  }
+  #home h1.inactive #unwind{
+    opacity: 0;
+  }
+  #unwind{
+    opacity: 1;
+    transition: opacity 1s 2s;
+  }
+  #home h1.inactive #tarakape{
+    opacity: 0;
+    color: #E0DEDE;
+    background-color: rgba(224, 222, 222, 0);
+  }
+  #tarakape{
+    opacity: 1;
+    color: #483A2B;
+    background-color: rgba(224, 222, 222, 1);
+    transition: opacity 500ms 3s, color 1s 3.5s, background-color 1s 3.5s;
+  }
+
   .banner-div{
     background-size: 100%;
     opacity: 1;

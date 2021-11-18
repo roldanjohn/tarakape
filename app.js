@@ -6,7 +6,11 @@ const callback = function(entries){
     }
     let theKids = entry.target.children;
     Array.from(theKids).forEach(x => {
-      x.classList.toggle('inactive');
+      x.classList.remove('inactive');
+      if(entry.target.id == 'home'){
+        entry.target.classList.remove('inactive');
+        console.log('hallo');
+      }
       if(x.classList.contains('banner-div')){
         Array.from(x.children).forEach(element => {
           element.classList.toggle('inactive');
